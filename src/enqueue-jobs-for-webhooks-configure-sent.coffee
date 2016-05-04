@@ -23,6 +23,7 @@ class EnqueueJobsForWebhooksConfigureSent
     @webhookManager.enqueueForSent {
       uuid: request.metadata.auth.uuid
       route: request.metadata.route
+      forwardedRoutes: request.metadata.forwardedRoutes
       rawData: request.rawData
       type: 'configure.sent'
     }, (error) =>
